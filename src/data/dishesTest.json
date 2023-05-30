@@ -1,0 +1,172 @@
+[
+  {
+    "category": "rolls",
+    "title": "Рол Хенд рол з лососем",
+    "descr": "лосось, сніжний краб, крем-сир, салат Айсберг, соус Манго чилі, такуан, начос.",
+    "weight": 310,
+    "price": 209,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2023/04/hend-rol-z-lososem-900h600-1-900x600.jpg.webp"
+  },
+  {
+    "category": "rolls",
+    "title": "Рол Кріспі манго-лосось",
+    "descr": "лосось, тунець, манго, крем-сир, омлет, салат Айсберг, темпура кляр, панко сухарі, соус Солодкий чилі.",
+    "weight": 350,
+    "price": 225,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2023/04/krispi-mango-losos-900h600-1-1-900x600.jpg.webp"
+  },
+  {
+    "category": "rolls",
+    "title": "Рол Філадельфія",
+    "descr": "лосось, огірок, ікра масаго, крем-сир.",
+    "weight": 209,
+    "price": 260,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2023/04/filadelfija-2023-900h600-900x600.jpg.webp"
+  },
+  {
+    "category": "rolls",
+    "title": "Рол Мангові рибки",
+    "descr": "лосось копчений, тигрові креветки, крем-сир, манго, авокадо, арахіс, соус солодкий чилі.",
+    "weight": 235,
+    "price": 250,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2023/04/mangovi-ribki-2023-900h600-2-900x600.jpg.webp"
+  },
+  {
+    "category": "rolls",
+    "title": "Рол Горбуша в кунжуті",
+    "descr": "горбуша, крем-сир, огірок, кунжут, соус вершковий кімчі.",
+    "weight": 155,
+    "price": 205,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2023/01/gorbusha-v-kunzhuti-900h600-900x600.jpg.webp"
+  },
+  {
+    "category": "rolls",
+    "title": "Рол Каліфорнікейшн",
+    "descr": "ікра масаго, крем-сир, огірок, соус вершковий кімчі.",
+    "weight": 169,
+    "price": 210,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2023/01/kalifornikeishn-900h600-900x600.jpg.webp"
+  },
+  {
+    "category": "rolls",
+    "title": "Рол Шиба",
+    "descr": "лосось, креветки, крем-сир, огірок, соус спайс, соус унагі.",
+    "weight": 230,
+    "price": 260,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2023/01/shiba-900h600-900x600.jpg.webp"
+  },
+  {
+    "category": "rolls",
+    "title": "Рол Унагі капл",
+    "descr": "креветки, лосось, крем-сир, омлет, унагі окунь, соус спайс, соус унагі, кунжут.",
+    "weight": 169,
+    "price": 235,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2023/01/kraken-900h600-900x600.jpg.webp"
+  },
+  {
+    "category": "pizza",
+    "title": "Піца М’ясна з крокетами",
+    "descr": "куряче філе, мисливські ковбаски, корнішони, моцарела, крокети, орегано, томатний соус.",
+    "weight": 500,
+    "price": 199,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2023/02/futbol-900h600-900x600.jpg.webp"
+  },
+  {
+    "category": "pizza",
+    "title": "ПіцаВершкова з грибами",
+    "descr": "печериці, гливи, польский гриб, цибуля марс, моцарела, петрушка, орегано, вершки, соус бешамель.",
+    "weight": 450,
+    "price": 185,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2023/02/gribnii-miks-900h600-900x600.jpg.webp"
+  },
+  {
+    "category": "pizza",
+    "title": "Піца Креветки + курка",
+    "descr": "куряче філе, креветки, моцарела, цукіні, томати чері, крем-сир, орегано, томатний соус.",
+    "weight": 530,
+    "price": 209,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2023/02/z-krevetkami-ta-kurkoju-900h600-900x600.jpg.webp"
+  },
+  {
+    "category": "pizza",
+    "title": "Піца 4 сири + Пепероні",
+    "descr": "шинка, салямі, сир Пармезан, твердий сир, моцарела, сир Дорблю, печериці, помідори, соус Бешамель, томатний соус.",
+    "weight": 500,
+    "price": 195,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2022/10/2-dabl-panch-169-245-grn-900x600.jpg.webp"
+  },
+  {
+    "category": "pizza",
+    "title": "Піца 4 м’яса",
+    "descr": "телятина су-від, салямі, ковбаски мисливські, куряче філе, сир дорблю, пармезан, моцарелла, сир твердий, орегано, томатний соус.",
+    "weight": 500,
+    "price": 195,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2021/05/4-myasa-900x600.jpg.webp"
+  },
+  {
+    "category": "pizza",
+    "title": "Піца Вегетаріанська",
+    "descr": "фета, моцарелла, броколі, маслини, болгарський перець, помідори, цибуля марс, орегано, томатний соус.",
+    "weight": 550,
+    "price": 169,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2021/05/vegatarianskaya-900x600.jpg.webp"
+  },
+  {
+    "category": "pizza",
+    "title": "Піца Вершкова салямі",
+    "descr": "моцарелла, салямі, орегано, соус бешамель, соус песто.",
+    "weight": 420,
+    "price": 185,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2020/05/slivochnaja-saljami-1-900x600.jpg.webp"
+  },
+  {
+    "category": "pizza",
+    "title": "Піца Карбонара",
+    "descr": "моцарелла, пармезан, бекон, куряче філе, жовток, зелень, соус бешамель, орегано.",
+    "weight": 500,
+    "price": 205,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2018/11/karbonara-900x600.jpg.webp"
+  },
+  {
+    "category": "dessert",
+    "title": "Пончик гьорл",
+    "descr": "ніжний полуничний пончик у присипці з бельгійського шоколаду",
+    "weight": 58,
+    "price": 45,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2022/07/donat-sis-900h600-900x600.jpg.webp"
+  },
+  {
+    "category": "dessert",
+    "title": "Пончик бой",
+    "descr": "ніжний шоколадний пончик у бельгійському шоколаді з присипкою",
+    "weight": 45,
+    "price": 56,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2022/07/donat-bro-900h600-900x600.jpg.webp"
+  },
+  {
+    "category": "dessert",
+    "title": "Карамельний чізкейк",
+    "descr": "сир, сметана, вершки, цукор, апельсин, яйце, карамельна паста, борошно, масло вершкове, цукрова пудра, згущене молоко, желатин.",
+    "weight": 95,
+    "price": 150,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2022/02/karamelnyj-chizkejk-900x600.jpg.webp"
+  },
+  {
+    "category": "dessert",
+    "title": "Ягідний чізкейк",
+    "descr": "сир, сметана, вершки, цукор, апельсин, яйце, смородина, борошно, масло вершкове, цукрова пудра, згущене молоко, желатин, полуниця.",
+    "weight": 95,
+    "price": 130,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2022/02/jagodnyj-chizkejk-900x600.jpg.webp"
+  },
+  {
+    "category": "dessert",
+    "title": "Ягідний чізкейк",
+    "descr": "сир, сметана, вершки, цукор, апельсин, яйце, смородина, борошно, масло вершкове, цукрова пудра, згущене молоко, желатин, полуниця.",
+    "weight": 95,
+    "price": 130,
+    "image": "https://watatsumi.com.ua/wp-content/uploads/2022/02/jagodnyj-chizkejk-900x600.jpg.webp",
+    "count": 1,
+    "priceTotal": 130
+  }
+]

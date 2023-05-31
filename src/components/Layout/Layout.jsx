@@ -1,16 +1,22 @@
-// import { useState } from "react";
-import { Outlet } from "react-router";
-import { Header } from "../Header/Header";
-import { Suspense } from "react";
-import { Loader } from "../Loader/Loader";
+import { Outlet } from 'react-router';
+import { Suspense } from 'react';
+
+import { Header } from '../Header/Header';
+import { Loader } from '../Loader/Loader';
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Layout = () => {
   return (
     <>
       <Header />
-      <Suspense fallback={<Loader />}>
-        <Outlet />
-      </Suspense>
+      <main>
+        <Suspense fallback={<Loader />}>
+          <Outlet />
+        </Suspense>
+        <ToastContainer />
+      </main>
     </>
   );
 };

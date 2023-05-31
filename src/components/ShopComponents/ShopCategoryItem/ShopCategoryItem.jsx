@@ -1,8 +1,6 @@
-import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { BuyBtn } from '../../CommonButtons/BuyBtn/BuyBtn';
-import { Loader } from '../../Loader/Loader';
 
 import { selectOrder } from '../../../redux/cart/cartSelectors';
 import { addDishToCart } from '../../../redux/cart/cartSlice';
@@ -30,9 +28,6 @@ export const ShopCategoryItem = ({ data }) => {
   const { _id, category, title, descr, weight, price, image } = data;
 
   const dispatch = useDispatch();
-
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
 
   const order = useSelector(selectOrder);
 
@@ -77,8 +72,6 @@ export const ShopCategoryItem = ({ data }) => {
           </ThumbBtn>
         </Wrap>
       </Item>
-
-      {isLoading && <Loader />}
     </>
   );
 };

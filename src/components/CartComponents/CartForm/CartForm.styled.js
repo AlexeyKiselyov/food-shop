@@ -17,12 +17,14 @@ export const Box = styled.div`
   box-shadow: 0px 1px 4px rgba(126, 147, 255, 0.2);
 
   & h2 {
+    margin-bottom: 25px;
+    margin-left: 15px;
+
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.01em;
     color: #1f3349;
-    margin-bottom: 15px;
   }
 
   @media (max-width: 1269px) {

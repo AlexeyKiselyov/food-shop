@@ -1,7 +1,6 @@
 import { useDispatch } from 'react-redux';
 
 import {
-  deleteDish,
   increaseDishQuantity,
   reduceDishQuantity,
 } from '../../../redux/cart/cartSlice';

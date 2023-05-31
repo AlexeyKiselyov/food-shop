@@ -5,10 +5,10 @@ export const messageAddOrder = name =>
     `${name}, дякуємо за замовлення! Чекайте на дзвінок для уточнення деталей! `,
     {
       position: 'bottom-center',
-      autoClose: 4000,
+      autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
-      pauseOnHover: false,
+      pauseOnHover: true,
       draggable: false,
       progress: undefined,
       theme: 'colored',
@@ -18,26 +18,26 @@ export const messageAddOrder = name =>
 export const messageError = payload =>
   toast.error(`${payload}`, {
     position: 'bottom-center',
-    autoClose: 4000,
+    autoClose: 5000,
     hideProgressBar: false,
     closeOnClick: true,
-    pauseOnHover: false,
+    pauseOnHover: true,
     draggable: false,
     progress: undefined,
     theme: 'colored',
   });
 
 export const messageHotNews = () =>
-  toast.success(
+  toast.info(
     `Цього року плануємо відкриття філії у Севастополі. Слідкуйте за новинами 😉`,
     {
       position: 'bottom-center',
-      autoClose: 4000,
+      autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
-      pauseOnHover: false,
+      pauseOnHover: true,
       draggable: false,
       progress: undefined,
-      theme: 'colored',
+      theme: 'light',
     }
   );

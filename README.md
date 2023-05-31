@@ -22,9 +22,5 @@
 <h2 align = "center"><a href="https://food-shop-dof1k44f3-alexeykiselyov.vercel.app/" target="_blank" rel="noreferrer noopener">
 Link to App</a></h2>
 
----
-
 <h2 align = "center"><a href="https://www.linkedin.com/in/olexiy-kiselyov/" target="_blank" rel="noreferrer noopener">
 Linkedin of developer</a></h2>
-
----

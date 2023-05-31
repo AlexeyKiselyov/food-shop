@@ -13,10 +13,18 @@
 
     Runs the app in the development mode.  
     Open [http://localhost:3000](http://localhost:3000) to view it in your
-    browser. The page will reload when you make changes.  
+    browser.  
+    The page will reload when you make changes.  
     You may also see any lint errors in the console.
+
+---
+
+<h2 align = "center"><a href="https://food-shop-dof1k44f3-alexeykiselyov.vercel.app/" target="_blank" rel="noreferrer noopener">
+Link to App</a></h2>
 
 ---
 
 <h2 align = "center"><a href="https://www.linkedin.com/in/olexiy-kiselyov/" target="_blank" rel="noreferrer noopener">
 Linkedin of developer</a></h2>
+
+---

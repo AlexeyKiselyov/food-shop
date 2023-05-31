@@ -7,9 +7,11 @@
 2.  <a href = "https://nodejs.org/uk" target="_blank" rel="noreferrer noopener">You
     need NODE.js.</a>
 
-3.  Write in terminal `cd food-shop`.
+3.  Write in terminal `cd food-shop` to get into the current directory.
 
-4.  Write in terminal `npm start`.
+4.  Write in terminal `npm i` to install all npm packages.
+
+5.  Write in terminal `npm start` to run the application.
 
     Runs the app in the development mode.  
     Open [http://localhost:3000](http://localhost:3000) to view it in your

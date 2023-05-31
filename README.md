@@ -2,19 +2,19 @@
 
 ## Guide:
 
-1.  Programs are in the folder root "src".
-2.  <a href = "https://nodejs.org/uk" target="_blank" rel="noreferrer noopener">Need
-    NODE.js.</a>
-3.  Write in terminal `cd src`.
-4.  Write in terminal `node (desired program)` (for example`node task1.js`).
-5.  You will see the result of running programs in the console.
-6.  Results are saved to a folder "src/results".
-7.  You can see and change the conditions for the program in the file
-    "src/data".
+1.  Сlone the repository.
 
-<h2 align = "center"> Tasks.</h2>
+2.  <a href = "https://nodejs.org/uk" target="_blank" rel="noreferrer noopener">You
+    need NODE.js.</a>
 
-### Завдання 1.
+3.  Write in terminal `cd food-shop`.
+
+4.  Write in terminal `npm start`.
+
+    Runs the app in the development mode.  
+    Open [http://localhost:3000](http://localhost:3000) to view it in your
+    browser. The page will reload when you make changes.  
+    You may also see any lint errors in the console.
 
 ---
 

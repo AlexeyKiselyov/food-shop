@@ -16,21 +16,21 @@ import { Notification } from '../../components/Notification/Notification';
 import { CartForm } from '../../components/CartComponents/CartForm/CartForm';
 
 const CartPage = () => {
-  const cartOrders = useSelector(selectOrder);
+  const cartOrder = useSelector(selectOrder);
 
   const [total, setTotal] = useState({
-    price: cartOrders.reduce((prev, curr) => prev + curr.priceTotal, 0),
-    count: cartOrders.reduce((prev, curr) => prev + curr.count, 0),
+    price: cartOrder.reduce((prev, curr) => prev + curr.priceTotal, 0),
+    count: cartOrder.reduce((prev, curr) => prev + curr.count, 0),
   });
 
   useEffect(() => {
     setTotal({
-      price: cartOrders.reduce((prev, curr) => prev + curr.priceTotal, 0),
-      count: cartOrders.reduce((prev, curr) => prev + curr.count, 0),
+      price: cartOrder.reduce((prev, curr) => prev + curr.priceTotal, 0),
+      count: cartOrder.reduce((prev, curr) => prev + curr.count, 0),
     });
-  }, [cartOrders]);
+  }, [cartOrder]);
 
-  const products = cartOrders.map((product, ind) => {
+  const products = cartOrder.map((product, ind) => {
     return <Product product={product} key={product._id} />;
   });
 
@@ -38,13 +38,13 @@ const CartPage = () => {
     <Section>
       <Container>
         <SectionTitle text="Кошик" />
-        {cartOrders.length ? (
+        {cartOrder.length ? (
           <>
             <CartHeader />
             {products}
             <CartFooter total={total} />
             <SectionTitle text="Оформлення замовлення " />
-            <CartForm />
+            <CartForm cartOrder={cartOrder} total={total} />
           </>
         ) : (
           <Notification message={EMPTY_CART} />

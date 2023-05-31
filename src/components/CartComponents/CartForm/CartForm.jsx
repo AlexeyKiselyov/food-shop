@@ -19,7 +19,7 @@ import { Loader } from '../../Loader/Loader';
 import { Button, FormBox, Box, CartFormWrapper } from './CartForm.styled';
 import './style.css';
 
-export const CartForm = () => {
+export const CartForm = ({ cartOrder, total }) => {
   const dispatch = useDispatch();
 
   const [isLoading, setIsLoading] = useState(false);
@@ -57,15 +57,17 @@ export const CartForm = () => {
     { name, number, street, house, apartment },
     { resetForm }
   ) => {
-    const newContact = {
+    const newOrder = {
       name,
       number,
       street,
       house: Number(house),
       apartment: Number(apartment),
+      order: cartOrder,
+      total,
     };
 
-    postOrder(newContact, setIsLoading, resetForm, dispatch);
+    postOrder(newOrder, setIsLoading, resetForm, dispatch);
   };
 
   return (

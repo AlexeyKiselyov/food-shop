@@ -31,9 +31,6 @@ export const CountControls = styled.div`
 
   img {
     display: block;
-  }
-
-  button {
     transition: scale ${p => p.theme.transition.first};
   }
 

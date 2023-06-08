@@ -1,0 +1,12 @@
+.css-89sty-placeholder {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.04em;
+  color: rgba(17, 17, 17, 0.6);
+
+  @media screen and (min-width: 768px) {
+    font-size: 17px;
+    line-height: 25px;
+  }
+}

@@ -1,7 +1,8 @@
 {
   "name": "food-shop",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://food-shop-five.vercel.app/",
   "dependencies": {
     "@iconify/react": "^4.0.1",
     "@react-google-maps/api": "^2.18.1",

@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const DeleteBtn = styled.button`
-  img {
-    transition: scale ${p => p.theme.transition.first};
-  }
+  transition: scale ${p => p.theme.transition.first};
 
   &:hover img,
   &:focus img {

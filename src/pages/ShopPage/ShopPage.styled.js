@@ -17,14 +17,7 @@ export const MenuWrap = styled.div`
 `;
 
 export const DropdownStyle = styled(Dropdown)`
-  flex-shrink: 0;
-  width: 160px;
-  font-size: 14px;
-
-  @media screen and (min-width: 768px) {
-    width: 200px;
-    font-size: 16px;
-  }
+  width: 200px;
 
   .Dropdown-control {
     border-radius: 20px;

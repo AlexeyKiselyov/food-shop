@@ -11,7 +11,6 @@ import { PHONE_REG_EXP } from '../../../helpers/constants';
 
 import { InputNumber } from './InputNumber/InputNumber';
 import { InputName } from './InputName/InputName';
-import { InputOrderCategory } from './InputOrderCategory/InputOrderCategory';
 import { InputStreet } from './InputStreet/InputStreet';
 import { InputHouse } from './InputHouse/InputHouse';
 import { InputApartment } from './InputApartment/InputApartment';
@@ -30,7 +29,6 @@ export const CartForm = ({ cartOrder, total }) => {
   const dispatch = useDispatch();
 
   const [isLoading, setIsLoading] = useState(false);
-  const [orderCategory, setOrderCategory] = useState('Потрібна доставка');
 
   const { REACT_APP_GOOGLE_MAP_API_KEY } = process.env;
 
@@ -43,64 +41,37 @@ export const CartForm = ({ cartOrder, total }) => {
     []
   );
 
-  const initialValues =
-    orderCategory === 'Потрібна доставка'
-      ? {
-          name: '',
-          number: '',
-          street: '',
-          house: '',
-          apartment: '',
-        }
-      : {
-          name: '',
-          number: '',
-        };
+  const initialValues = {
+    name: '',
+    number: '',
+    street: '',
+    house: '',
+    apartment: '',
+  };
 
-  const schema =
-    orderCategory === 'Потрібна доставка'
-      ? Yup.object({
-          name: Yup.string()
-            .min(2, "Ім'я повинно містити не менше 2х літер")
-            .max(32, "Ім'я повинно містити не більше 32х літер")
-            .required("Ім'я є обов'язковим"),
-          number: Yup.string()
-            .matches(PHONE_REG_EXP, 'Будь ласка, введіть валідний телефон')
-            .required("Телефон є обов'язковим"),
-          street: Yup.string().required("Вулиця є обов'язковою"),
-          house: Yup.string().required("Номер дому є обов'язковим"),
-          apartment: Yup.string(),
-        })
-      : Yup.object({
-          name: Yup.string().min(4).max(32).required("Ім'я є обов'язковим"),
-          number: Yup.string()
-            .matches(PHONE_REG_EXP, 'Будь ласка, введіть валідний телефон')
-            .required("Телефон є обов'язковим"),
-        });
+  const schema = Yup.object({
+    name: Yup.string().min(4).max(32).required("Ім'я є обов'язковим"),
+    number: Yup.string()
+      .matches(PHONE_REG_EXP, 'Будь ласка, введіть валідний телефон')
+      .required("Телефон є обов'язковим"),
+    street: Yup.string().required("Вулиця є обов'язковою"),
+    house: Yup.string().required("Номер дому є обов'язковим"),
+    apartment: Yup.string(),
+  });
 
   const handleSubmit = (
     { name, number, street, house, apartment },
     { resetForm }
   ) => {
-    const newOrder =
-      orderCategory === 'Потрібна доставка'
-        ? {
-            orderCategory,
-            name,
-            number,
-            street,
-            house: Number(house),
-            apartment: Number(apartment),
-            order: cartOrder,
-            total,
-          }
-        : {
-            orderCategory,
-            name,
-            number,
-            order: cartOrder,
-            total,
-          };
+    const newOrder = {
+      name,
+      number,
+      street,
+      house: Number(house),
+      apartment: Number(apartment),
+      order: cartOrder,
+      total,
+    };
 
     postOrder(newOrder, setIsLoading, resetForm, dispatch);
   };
@@ -118,28 +89,16 @@ export const CartForm = ({ cartOrder, total }) => {
             <FormBox action="">
               <InputName />
               <InputNumber />
-              <InputOrderCategory
+              <InputStreet
                 setFieldTouched={setFieldTouched}
                 setFieldError={setFieldError}
                 setFieldValue={setFieldValue}
-                setOrderCategory={setOrderCategory}
+                values={values}
               />
-              {orderCategory === 'Потрібна доставка' ? (
-                <>
-                  <InputStreet
-                    setFieldTouched={setFieldTouched}
-                    setFieldError={setFieldError}
-                    setFieldValue={setFieldValue}
-                    values={values}
-                  />
-                  <HouseAndAppartmentsWrapper>
-                    <InputHouse />
-                    <InputApartment />
-                  </HouseAndAppartmentsWrapper>
-                </>
-              ) : (
-                <></>
-              )}
+              <HouseAndAppartmentsWrapper>
+                <InputHouse />
+                <InputApartment />
+              </HouseAndAppartmentsWrapper>
               <Button type="submit">Оформити замовлення</Button>
             </FormBox>
           )}

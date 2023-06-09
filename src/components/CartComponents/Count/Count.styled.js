@@ -33,16 +33,8 @@ export const CountControls = styled.div`
     display: block;
   }
 
-  button {
-    transition: scale ${p => p.theme.transition.first};
-  }
-
-  button:hover img,
-  button:focus img {
-    scale: 1.2;
-  }
-
-  button:active img {
-    scale: 1;
+  img:hover,
+  img:focus {
+    fill: red;
   }
 `;

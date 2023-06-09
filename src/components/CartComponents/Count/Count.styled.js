@@ -31,10 +31,15 @@ export const CountControls = styled.div`
 
   img {
     display: block;
+    transition: scale ${p => p.theme.transition.first};
   }
 
-  img:hover,
-  img:focus {
-    fill: red;
+  button:hover img,
+  button:focus img {
+    scale: 1.2;
+  }
+
+  button:active img {
+    scale: 1;
   }
 `;

@@ -11,18 +11,26 @@ import { PHONE_REG_EXP } from '../../../helpers/constants';
 
 import { InputNumber } from './InputNumber/InputNumber';
 import { InputName } from './InputName/InputName';
+import { InputOrderCategory } from './InputOrderCategory/InputOrderCategory';
 import { InputStreet } from './InputStreet/InputStreet';
 import { InputHouse } from './InputHouse/InputHouse';
 import { InputApartment } from './InputApartment/InputApartment';
 import { Loader } from '../../Loader/Loader';
 
-import { Button, FormBox, Box, CartFormWrapper } from './CartForm.styled';
+import {
+  Button,
+  FormBox,
+  Box,
+  CartFormWrapper,
+  HouseAndAppartmentsWrapper,
+} from './CartForm.styled';
 import './style.css';
 
 export const CartForm = ({ cartOrder, total }) => {
   const dispatch = useDispatch();
 
   const [isLoading, setIsLoading] = useState(false);
+  const [orderCategory, setOrderCategory] = useState('Потрібна доставка');
 
   const { REACT_APP_GOOGLE_MAP_API_KEY } = process.env;
 
@@ -35,37 +43,64 @@ export const CartForm = ({ cartOrder, total }) => {
     []
   );
 
-  const initialValues = {
-    name: '',
-    number: '',
-    street: '',
-    house: '',
-    apartment: '',
-  };
+  const initialValues =
+    orderCategory === 'Потрібна доставка'
+      ? {
+          name: '',
+          number: '',
+          street: '',
+          house: '',
+          apartment: '',
+        }
+      : {
+          name: '',
+          number: '',
+        };
 
-  const schema = Yup.object({
-    name: Yup.string().min(4).max(32).required("Ім'я є обов'язковим"),
-    number: Yup.string()
-      .matches(PHONE_REG_EXP, 'Будь ласка, введіть валідний телефон')
-      .required("Телефон є обов'язковим"),
-    street: Yup.string().required("Вулиця є обов'язковою"),
-    house: Yup.string().required("Номер дому є обов'язковим"),
-    apartment: Yup.string(),
-  });
+  const schema =
+    orderCategory === 'Потрібна доставка'
+      ? Yup.object({
+          name: Yup.string()
+            .min(2, "Ім'я повинно містити не менше 2х літер")
+            .max(32, "Ім'я повинно містити не більше 32х літер")
+            .required("Ім'я є обов'язковим"),
+          number: Yup.string()
+            .matches(PHONE_REG_EXP, 'Будь ласка, введіть валідний телефон')
+            .required("Телефон є обов'язковим"),
+          street: Yup.string().required("Вулиця є обов'язковою"),
+          house: Yup.string().required("Номер дому є обов'язковим"),
+          apartment: Yup.string(),
+        })
+      : Yup.object({
+          name: Yup.string().min(4).max(32).required("Ім'я є обов'язковим"),
+          number: Yup.string()
+            .matches(PHONE_REG_EXP, 'Будь ласка, введіть валідний телефон')
+            .required("Телефон є обов'язковим"),
+        });
 
   const handleSubmit = (
     { name, number, street, house, apartment },
     { resetForm }
   ) => {
-    const newOrder = {
-      name,
-      number,
-      street,
-      house: Number(house),
-      apartment: Number(apartment),
-      order: cartOrder,
-      total,
-    };
+    const newOrder =
+      orderCategory === 'Потрібна доставка'
+        ? {
+            orderCategory,
+            name,
+            number,
+            street,
+            house: Number(house),
+            apartment: Number(apartment),
+            order: cartOrder,
+            total,
+          }
+        : {
+            orderCategory,
+            name,
+            number,
+            order: cartOrder,
+            total,
+          };
 
     postOrder(newOrder, setIsLoading, resetForm, dispatch);
   };
@@ -83,16 +118,28 @@ export const CartForm = ({ cartOrder, total }) => {
             <FormBox action="">
               <InputName />
               <InputNumber />
-              <InputStreet
+              <InputOrderCategory
                 setFieldTouched={setFieldTouched}
                 setFieldError={setFieldError}
                 setFieldValue={setFieldValue}
-                values={values}
+                setOrderCategory={setOrderCategory}
               />
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <InputHouse />
-                <InputApartment />
-              </div>
+              {orderCategory === 'Потрібна доставка' ? (
+                <>
+                  <InputStreet
+                    setFieldTouched={setFieldTouched}
+                    setFieldError={setFieldError}
+                    setFieldValue={setFieldValue}
+                    values={values}
+                  />
+                  <HouseAndAppartmentsWrapper>
+                    <InputHouse />
+                    <InputApartment />
+                  </HouseAndAppartmentsWrapper>
+                </>
+              ) : (
+                <></>
+              )}
               <Button type="submit">Оформити замовлення</Button>
             </FormBox>
           )}

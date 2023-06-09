@@ -8,7 +8,6 @@ export const InputApartment = () => {
       <Input
         name="apartment"
         type="number"
-        min="1"
         max="1000"
         title="Вкажіть номер квартири ввевши цифри"
         placeholder="Номер квартири"

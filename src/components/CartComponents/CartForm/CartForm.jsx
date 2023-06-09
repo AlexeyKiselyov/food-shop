@@ -16,13 +16,7 @@ import { InputHouse } from './InputHouse/InputHouse';
 import { InputApartment } from './InputApartment/InputApartment';
 import { Loader } from '../../Loader/Loader';
 
-import {
-  Button,
-  FormBox,
-  Box,
-  CartFormWrapper,
-  HouseAndAppartmentsWrapper,
-} from './CartForm.styled';
+import { Button, FormBox, Box, CartFormWrapper } from './CartForm.styled';
 import './style.css';
 
 export const CartForm = ({ cartOrder, total }) => {
@@ -95,10 +89,10 @@ export const CartForm = ({ cartOrder, total }) => {
                 setFieldValue={setFieldValue}
                 values={values}
               />
-              <HouseAndAppartmentsWrapper>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <InputHouse />
                 <InputApartment />
-              </HouseAndAppartmentsWrapper>
+              </div>
               <Button type="submit">Оформити замовлення</Button>
             </FormBox>
           )}

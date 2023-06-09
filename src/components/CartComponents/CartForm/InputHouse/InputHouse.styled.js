@@ -17,9 +17,8 @@ export const Label = styled.label`
 `;
 
 export const Input = styled(Field)`
-  width: 180px;
+  width: 100%;
   padding: 14px 10px 13px 32px;
-
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
@@ -34,12 +33,11 @@ export const Input = styled(Field)`
   @media screen and (min-width: 768px) {
     font-size: 18px;
     line-height: 25px;
-    width: 300px;
   }
 
-  @media screen and (min-width: 1269px) {
-    width: 280px;
-  }
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
 
   ::placeholder {
     font-weight: 400;

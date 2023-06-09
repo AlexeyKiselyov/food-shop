@@ -31,7 +31,6 @@ export const Box = styled.div`
     width: 100%;
   }
 `;
-
 export const BtnExit = styled.button`
   position: absolute;
   display: flex;
@@ -73,12 +72,6 @@ export const Input = styled(Field)`
   &::placeholder {
     color: #a8a8a8;
   }
-`;
-
-export const HouseAndAppartmentsWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
 `;
 
 export const Error = styled.span`

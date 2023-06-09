@@ -1,16 +1,13 @@
 import AsyncSelect from 'react-select/async';
-
-import { ErrorMessage } from 'formik';
-
-import streets from '../../../../data/streets.json';
-
 import {
   ErrorText,
   Label,
   controlStyle,
   themeColors,
 } from './InputStreet.styled';
-import './style.css';
+import streets from '../../../../data/streets.json';
+
+import { ErrorMessage } from 'formik';
 
 export const InputStreet = ({
   setFieldTouched,

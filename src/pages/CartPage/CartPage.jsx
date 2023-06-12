@@ -15,7 +15,7 @@ import { CartFooter } from '../../components/CartComponents/CartFooter/CartFoote
 import { Notification } from '../../components/Notification/Notification';
 import { CartForm } from '../../components/CartComponents/CartForm/CartForm';
 
-export const CartPage = () => {
+const CartPage = () => {
   const cartOrder = useSelector(selectOrder);
 
   const [total, setTotal] = useState({
@@ -54,4 +54,4 @@ export const CartPage = () => {
   );
 };
 
-// export default CartPage;
+export default CartPage;

@@ -16,9 +16,9 @@ import { NOT_FOUND } from '../../helpers/constants';
 import { DropdownStyle, MenuWrap, LoadMoreBtn } from './ShopPage.styled';
 import { getDishes } from '../../serveсes';
 
-// ========================NoticesPage===========================
+// ========================ShopPage===========================
 
-export const ShopPage = () => {
+const ShopPage = () => {
   const { route } = useParams();
 
   const [isLoading, setIsLoading] = useState(false);
@@ -119,4 +119,4 @@ export const ShopPage = () => {
   );
 };
 
-// export default ShopPage;
+export default ShopPage;

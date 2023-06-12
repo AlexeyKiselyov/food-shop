@@ -18,7 +18,7 @@ import { getDishes } from '../../serveсes';
 
 // ========================ShopPage===========================
 
-const ShopPage = () => {
+export const ShopPage = () => {
   const { route } = useParams();
 
   const [isLoading, setIsLoading] = useState(false);
@@ -119,4 +119,4 @@ const ShopPage = () => {
   );
 };
 
-export default ShopPage;
+// export default ShopPage;

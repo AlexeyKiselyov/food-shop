@@ -20,7 +20,7 @@ export const controlStyle = (baseStyles, state) => {
     padding: '8px 10px 8px 24px',
     fontWeight: '400',
     fontSize: '18px',
-    lineHeight: '25px',
+    lineHeight: '19px',
     letterSpacing: '0.04em',
     fontFamily: 'Manrope',
     borderWidth: state.isFocused ? '1px' : '1px',

@@ -6,7 +6,7 @@ export const Input = styled(MaskedInput)`
   width: 100%;
   padding: 14px 10px 13px 32px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 19px;
   letter-spacing: 0.04em;
   color: #111111;
@@ -15,15 +15,6 @@ export const Input = styled(MaskedInput)`
   border: 1px solid rgba(245, 146, 86, 0.5);
   border-radius: 40px;
   outline: none;
-
-  @media screen and (min-width: 768px) {
-    font-size: 18px;
-    line-height: 25px;
-  }
-
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 25px;
 
   ::placeholder {
     font-weight: 400;

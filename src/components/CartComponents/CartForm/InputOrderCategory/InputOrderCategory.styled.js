@@ -17,7 +17,7 @@ export const controlStyle = (baseStyles, state) => {
     ...baseStyles,
     borderRadius: '40px',
     backgroundColor: '#fdf7f2',
-    padding: '8px 10px 8px 24px',
+    padding: '6px 10px 6px 20px',
     fontWeight: '400',
     fontSize: '18px',
     lineHeight: '19px',

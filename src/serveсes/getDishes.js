@@ -33,6 +33,3 @@ export default function getDishes(
       setIsLoading(false);
     });
 }
-
-
-const test;

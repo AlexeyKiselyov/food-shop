@@ -12,7 +12,7 @@ export const HomePage = () => {
     <>
       <HomeSection>
         <Container>
-          <Title>Вітаємо у нашому магазині їжі!</Title>
+          <Title>Вітаємо Вас у нашому магазині їжі!</Title>
         </Container>
       </HomeSection>
     </>

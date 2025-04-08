@@ -30,7 +30,7 @@ export const CartPage = () => {
     });
   }, [cartOrder]);
 
-  const products = cartOrder.map((product, ind) => {
+  const products = cartOrder.map(product => {
     return <Product product={product} key={product._id} />;
   });
 

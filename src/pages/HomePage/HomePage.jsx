@@ -4,7 +4,7 @@ import { Container } from '../../components/CommonComponents/Container/Container
 import { Title, HomeSection } from './HomePage.styled';
 import { messageHotNews } from '../../utils/messagesNotify';
 
-export const HomePage = () => {
+export default function HomePage() {
   const hasShownMessage = useRef(false);
 
   useEffect(() => {
@@ -22,6 +22,4 @@ export const HomePage = () => {
       </HomeSection>
     </>
   );
-};
-
-// export default HomePage;
+}

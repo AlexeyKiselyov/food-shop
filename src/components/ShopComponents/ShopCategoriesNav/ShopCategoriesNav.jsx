@@ -16,7 +16,6 @@ export const ShopCategoriesNav = () => {
           </Item>
           <Item>
             <LinkNav to="/dishes/rolls">
-              {' '}
               Роли <GiSushis size={isMobile ? '20' : '25'} />
             </LinkNav>
           </Item>

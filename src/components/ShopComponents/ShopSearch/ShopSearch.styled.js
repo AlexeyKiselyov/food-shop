@@ -45,4 +45,20 @@ export const RemoveBtn = styled.button`
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
+
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  svg {
+    position: static;
+    transform: translateY(0);
+
+    object-fit: cover;
+  }
 `;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { SectionTitle } from '../../components/CommonComponents/SectionTitle/SectionTitle';
@@ -18,7 +18,7 @@ import { getDishes } from '../../serveсes';
 
 // ========================ShopPage===========================
 
-export const ShopPage = () => {
+export default function ShopPage() {
   const { route } = useParams();
 
   const [isLoading, setIsLoading] = useState(false);
@@ -26,6 +26,8 @@ export const ShopPage = () => {
   const [notices, setNotices] = useState([]);
   const [searchTitleQwery, setSearchTitleQwery] = useState('');
   const [filter, setFilter] = useState('priceUp');
+
+  const isFirstRender = useRef(true);
 
   // Load more
   const [pageNumber, setPageNumber] = useState(1);
@@ -45,7 +47,6 @@ export const ShopPage = () => {
       setloadMoreBtnText('Завантажити ще');
     }
   }, [pageNumber, totalPages]);
-  // ============
 
   useEffect(() => {
     setNotices([]);
@@ -54,6 +55,11 @@ export const ShopPage = () => {
   }, [route, searchTitleQwery, filter]);
 
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
     getDishes(
       route,
       pageNumber,
@@ -117,6 +123,4 @@ export const ShopPage = () => {
       </Container>
     </Section>
   );
-};
-
-// export default ShopPage;
+}

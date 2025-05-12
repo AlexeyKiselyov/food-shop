@@ -7,7 +7,7 @@ import { Loader } from '../Loader/Loader';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export const Layout = () => {
+export default function Layout() {
   return (
     <>
       <Header />
@@ -19,4 +19,4 @@ export const Layout = () => {
       </main>
     </>
   );
-};
+}

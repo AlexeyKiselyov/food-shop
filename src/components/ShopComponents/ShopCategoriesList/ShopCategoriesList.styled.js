@@ -9,8 +9,4 @@ export const List = styled.ul`
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  @media screen and (min-width: 1280px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
 `;

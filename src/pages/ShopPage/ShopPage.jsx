@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { SectionTitle } from '../../components/CommonComponents/SectionTitle/SectionTitle';
@@ -27,8 +27,6 @@ export default function ShopPage() {
   const [searchTitleQwery, setSearchTitleQwery] = useState('');
   const [filter, setFilter] = useState('priceUp');
 
-  const isFirstRender = useRef(true);
-
   // Load more
   const [pageNumber, setPageNumber] = useState(1);
   const [totalPages, setTotalPages] = useState(null);
@@ -55,10 +53,8 @@ export default function ShopPage() {
   }, [route, searchTitleQwery, filter]);
 
   useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
-    }
+    const controller = new AbortController();
+    const signal = controller.signal;
 
     getDishes(
       route,
@@ -67,8 +63,13 @@ export default function ShopPage() {
       setIsLoading,
       setNotices,
       setTotalPages,
-      filter
+      filter,
+      signal
     );
+
+    return () => {
+      controller.abort();
+    };
   }, [route, searchTitleQwery, pageNumber, filter]);
 
   const onSearch = searchQuery => {

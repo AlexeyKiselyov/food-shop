@@ -13,11 +13,18 @@ export default function getDishes(
   setIsLoading,
   setNotices,
   setTotalPages,
-  filter
+  filter,
+  signal
 ) {
   setIsLoading(true);
   axios(
-    `/dishes/${route}?page=${pageNumber}&limit=4&qwery=${searchTitleQwery}&sort=${filter}`
+    `/dishes/${route}?page=${pageNumber}&limit=4&qwery=${searchTitleQwery}&sort=${filter}`,
+    {
+      headers: {
+        accept: 'application/json',
+      },
+      signal,
+    }
   )
     .then(res => {
       const { dishes, totalPages } = res.data;
@@ -27,6 +34,9 @@ export default function getDishes(
       });
     })
     .catch(error => {
+      if (axios.isCancel(error)) {
+        return;
+      }
       messageError(error.message);
     })
     .finally(() => {
